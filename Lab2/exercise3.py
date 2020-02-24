@@ -1,7 +1,7 @@
 #Authors Abdullah Khan, Asif Rasheed
 #Programming Languages (CMP 321) Lab 2 Exercise 3
 
-file =  open('email.txt', 'r', encoding ='unicode_escape').readlines()
+file =  open('/home/runner/work/CMP321/CMP321/Lab2/email.txt', 'r', encoding ='unicode_escape').readlines()
 
 for line in file:
     line = line.replace('\n','') #removes new line character
