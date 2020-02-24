@@ -14,12 +14,12 @@ jobs:
       with:
         python-version: 3.8
     - name: Testing Lab 1 Exercise 1
-      run: python3 /Lab1/Exercise1.py
+      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise1.py
     - name: Testing Lab 1 Exercise 2
-      run: python3 /Lab1/Exercise2.py
+      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise2.py
     - name: Testing Lab 1 Exercise 3
-      run: python3 /Lab1/Exercise3.py
+      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise3.py
     - name: Testing Lab 1 Exercise 4
-      run: python3 /Lab1/Exercise4.py
+      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise4.py
     - name: Testing Lab 1 Exercise 5
-      run: python3 /Lab1/Exercise5.py
+      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise5.py
