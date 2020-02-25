@@ -19,6 +19,7 @@ def mult(left,right):
         for j in range(len(right[0])):
             for k in range(len(right)):
                 result[i][j]+= left[i][k]*right[k ][j]
-r = [[1,2],[2,1]]
-p = [[1,2],[2,1]]
-mult(r,p)
+
+A =  [ [1,3,5] , [2,4,6] ]
+B =  [ [10,3] , [6,7] , [4,9] ]
+mult(A,B)
