@@ -7,19 +7,15 @@ def mult(left,right):
         print('Exception Thrown!\nMatrix size donot match')
         exit(0)
     
-    result = []
-    for i in range(len(left)):
-            rows = []
-            for j in range(len(right[0])):
-                rows.append(0)
-            result.append(rows)
-    print(result)
+    result = [[0 for i in range(len(left))], [0 for i in range(len(right[0]))]]
 
     for i in range(len(left)):
         for j in range(len(right[0])):
             for k in range(len(right)):
                 result[i][j]+= left[i][k]*right[k ][j]
+    return result
 
-A =  [ [1,3,5] , [2,4,6] ]
+A =  [ [1,3,5] , [2,4,6] ]	
 B =  [ [10,3] , [6,7] , [4,9] ]
-mult(A,B)
+result = mult(A,B)
+print(result)
