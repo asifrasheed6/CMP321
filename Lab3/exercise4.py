@@ -30,9 +30,9 @@ for x in serverInfo:
 print(db)
 print('\n\n\n\n')
 for employee in  db.values():
-    print(employee['username'].upper(),employee['surname'].upper(),employee['role'].upper())
+    print(employee['username'].capitalize(),employee['surname'].capitalize(),employee['role'].capitalize())
 print('\n\n\n\n')
 index =sorted(db.keys())
 for i in index:
-    print(db[i]['username'].upper(),db[i]['surname'].upper(),db[i]['role'].upper())
+    print(db[i]['username'].capitalize(),db[i]['surname'].capitalize(),db[i]['role'].capitalize())
 
