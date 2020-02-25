@@ -1,3 +1,6 @@
+#Authors Abdullah Khan, Asif Rasheed
+#Programming Languages (CMP 321) Lab 3 Exercise 2
+
 list=[(10,8,12),(111,64,45),(11,22,33),(44,55,66),(77,88,99)]
 list.pop()
 list.insert(len(list)-1,(99,99,99))
