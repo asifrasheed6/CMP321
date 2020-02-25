@@ -8,7 +8,7 @@ def mult(left,right):
         exit(0)
     
     result = []
-    for i in range(len(left):
+    for i in range(len(left)):
             rows = []
             for j in range(len(right[0])):
                 rows.append(0)
