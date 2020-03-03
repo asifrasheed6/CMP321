@@ -1,0 +1,23 @@
+import math
+
+def isodd(i):
+    if i%2==0:
+        return False
+    else:
+        return True
+
+j=[]
+
+def apply_select(odd,listy):
+    res=odd(listy[0])
+    if res==False:
+        del listy[0]
+    if res==True:
+        j.append(listy[0])
+        del listy[0]
+        
+    if len(listy)>0:
+        apply_select(odd,listy) #Recursively calls apply_select
+    return j
+        
+print(apply_select(isodd,[2,3,5,8,9])) #returns odd set
