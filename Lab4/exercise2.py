@@ -1,3 +1,6 @@
+
+#Authors Abdullah Khan, Asif Rasheed
+#Programming Languages (CMP 321) Lab 4 Exercise 2
 #PART A
 def enum(arg):
     li = list(range(len(arg)))
