@@ -2,6 +2,7 @@
 #Programming Languages (CMP 321) Lab 5 Exercise 1
 
 from collections import namedtuple
+import turtle
 Point = namedtuple('Point', ['name', 'x', 'y'])
 
 # Exception Classes:
@@ -10,6 +11,8 @@ class ExistingPointError(Exception):
 class ArgumentsException(Exception):
 	pass
 class PointNotFoundError(Exception):
+	pass
+class TypeError(Exception):
 	pass
 
 class Polygon:
@@ -60,7 +63,10 @@ class Polygon:
  
     # Returns string (to allow print(Polynomial))
 	def __str__(self):
-		return str(self.points)
+		buffer = []
+		for point in self.points:
+			buffer.append(point.name+': ('+str(point.x)+','+str(point.y)+')')
+		return '-> '.join(buffer)
 
 	# Equality operator
 	def __eq__(self, other):
@@ -69,5 +75,41 @@ class Polygon:
 				return True
 		return False
 
-p = Polygon( ('A',5,0), ('B',10,5), ('C',5,10), ('D',-2,8) )
+# Draw function, only works with objects of type polygon
+def draw_polygon(pol, speed=2, color='black'): # Default speed is 2 and color is black
+	try:
+		if not isinstance(pol,Polygon):
+			raise TypeError
+		turtle.speed(speed)
+		turtle.color(color)
+		turtle.hideturtle()
+		origin = pol.points[0]
+		turtle.penup()
+		turtle.goto(origin.x,origin.y)
+		turtle.pendown()
+		for point in pol.points:
+			turtle.goto(point.x,point.y)
+			turtle.write(point.name)
+		turtle.goto(origin.x,origin.y)
+		turtle.exitonclick()
+	except TypeError:
+		print('Type Exception Thrown')
+
+p = Polygon( Point('A',150,80), Point('B',150,50), Point('C',5,10), Point('D',-150,50) )
 print(p)
+q = Polygon( Point('A',150,80), Point('B',150,50), Point('C',5,10), Point('D',-150,50) )
+print(p==q)
+
+p.setPoint(Point('A',150,80)) # Throws Exception
+p.getPoint('E') # Throws Exception
+p.deletePoint('E') # Throws Exception
+
+p.setPoint(Point('E',200,250))
+print(p)
+k = p.getPoint('E')
+print(k)
+p.deletePoint('E')
+print(p)
+print('There are',len(p),'points in p')
+
+draw_polygon(p)
