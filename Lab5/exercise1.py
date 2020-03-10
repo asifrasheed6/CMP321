@@ -31,8 +31,9 @@ class Polygon:
     # Setter function
 	def setPoint(self,pt):
 		try:
-			if pt in self.points: # Checks for duplicates
-				raise ExistingPointError #If there is a duplicate
+			for point in self.points:
+				if (pt.name == point.name) or (pt.x==point.x and pt.y==point.y): # Checks for duplicates
+					raise ExistingPointError #If there is a duplicate
 			self.points.append(pt) # If no duplicates
 		except ExistingPointError:
 			print('Duplicate point found!')
