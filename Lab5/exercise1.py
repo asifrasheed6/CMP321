@@ -103,6 +103,8 @@ q = Polygon( Point('A',150,80), Point('B',150,50), Point('C',5,10), Point('D',-1
 print(p==q)
 
 p.setPoint(Point('A',150,80)) # Throws Exception
+p.setPoint(Point('A',200,250)) # Throws Exception
+p.setPoint(Point('E',150,80)) # Throws Exception
 p.getPoint('E') # Throws Exception
 p.deletePoint('E') # Throws Exception
 
