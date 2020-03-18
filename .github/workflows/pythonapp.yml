@@ -51,5 +51,7 @@ jobs:
     - name: Testing Lab 4 Exercise 5
       run: python3 /home/runner/work/CMP321/CMP321/Lab4/exercise5.py
     
-    - name: Testing Lab 5 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab5/exercise1.py
+    - name: Testing Lab 6 Exercise 1
+      run: python3 /home/runner/work/CMP321/CMP321/Lab6/exercise1.py
+    - name: Testing Lab 6 Exercise 2
+      run: python3 /home/runner/work/CMP321/CMP321/Lab6/exercise2.py
