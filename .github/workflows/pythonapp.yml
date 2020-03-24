@@ -55,3 +55,10 @@ jobs:
       run: python3 /home/runner/work/CMP321/CMP321/Lab6/exercise1.py
     - name: Testing Lab 6 Exercise 2
       run: python3 /home/runner/work/CMP321/CMP321/Lab6/exercise2.py
+      
+    - name: Testing Lab 7 Exercise 1
+      run: python3 /home/runner/work/CMP321/CMP321/Lab7/exercise1.py
+    - name: Testing Lab 7 Exercise 2
+      run: python3 /home/runner/work/CMP321/CMP321/Lab7/exercise2.py
+    - name: Testing Lab 7 Exercise 3
+      run: python3 /home/runner/work/CMP321/CMP321/Lab7/exercise3.py
