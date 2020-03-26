@@ -3,7 +3,13 @@
 
 # PART A
 # Checks if the given number is prime or not
-def isPrime(n, i=2): return True if i>(n**(1/2)) else False if n%i==0 else isPrime(n,i+1)
+def isItPrime(n, i=2): return True if i>(n**(1/2)) else False if n%i==0 else isPrime(n,i+1) # Won't work for large numbers thanks to the runtime stack
+
+def isPrime(num): # Would work with large numbers
+     for i in range(2,int(num**(1/2))+1):
+         if num%i == 0 :
+             return False
+     return True
 
 # Returns prime number larger than the given argument
 def genPrime(i=1):
