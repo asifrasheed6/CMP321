@@ -24,8 +24,9 @@ for lines in lst:
 
 print("Top 20 Most Popular Words: ")
 
-output = zip([str(i+1) for i in range(20)],words[0:20])
-print(output)
+output = zip([str(i+1)+".'" for i in range(20)],words[0:20])
+for i, word in output: print(i+word,end="' - ")
+print()
 
 # Part b
 url="http://textfiles.com/100/famous.bug"
@@ -40,4 +41,3 @@ except urllib.error.URLError:
 
 S = "\n".join(lst)
 
-print(S)
