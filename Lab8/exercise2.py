@@ -16,7 +16,7 @@ try:
 except urllib.error.URLError:
     print("Error: Check the url")
 
-for i in range(4): list.pop(i) # Ignoring the first 4 lines
+for i in range(4): lst.pop(i) # Ignoring the first 4 lines
 
 lst_words = [] # List of words
 for lines in list:
