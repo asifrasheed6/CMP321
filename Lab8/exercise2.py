@@ -30,14 +30,9 @@ print(output)
 # Part b
 url="http://textfiles.com/100/famous.bug"
 
-lst = []
-
 try:
-    for line in urlopen(url):
-        lst.append(line.decode('utf8'))
+    S = urlopen(url).decode('utf8')
 except urllib.error.URLError:
     print("Error: Check the url")
-
-S = "\n".join(lst)
 
 print(S)
