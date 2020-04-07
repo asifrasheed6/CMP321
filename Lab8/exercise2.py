@@ -20,6 +20,6 @@ for i in range(4): lst.pop(0) # Ignoring the first 4 lines
 
 words = [] # List of words
 for lines in lst:
-    lst_words.append(lines.split(";")[1])
+    words.append(lines.split(";")[1])
 
 print(words)
