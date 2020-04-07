@@ -14,3 +14,5 @@ try:
         lst.append(line.decode('utf8'))
 except urllib.error.URLError:
     print("Error: Check the url")
+
+print(lst)
