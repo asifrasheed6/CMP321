@@ -54,14 +54,21 @@ for line in S.split("\n"):
 				word_count[word.lower()]=1
 
 word_count = sorted(word_count.items(), key = lambda kv:(kv[1],kv[0]), reverse=True)
+word_count = [word for word, count in word_count]
 
-print("\nTop 20 Words From Famous Bug: ")
-for i, word in zip([str(i+1)+".'" for i in range(20)],[i for i,r in word_count[0:20]]):
+print("\nTop 20 Words in Famous Bug: ")
+for i, word in zip([str(i+1)+".'" for i in range(20)],[i for i in word_count[0:20]]):
 	print(i+word,end="' - ")
 print()
 
 # Part e
 print("\nCommon Words in the Two List: ")
-for word in [word for word, count in word_count[0:20] if word in words[0:20]]:
+for word in [word for word in word_count[0:20] if word in words[0:20]]:
 	print(word, end=", ")
 print()
+
+# Part f
+print("\nDisperencies between the two list:")
+for i in range(20):
+	if words[i] != word_count[i]:
+		print(i+1,' most frequent word is different')
