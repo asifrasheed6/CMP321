@@ -30,6 +30,8 @@ print(output)
 # Part b
 url="http://textfiles.com/100/famous.bug"
 
+lst = []
+
 try:
     for line in urlopen(url):
         lst.append(line.decode('utf8'))
