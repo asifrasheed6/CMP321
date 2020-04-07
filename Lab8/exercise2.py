@@ -24,8 +24,8 @@ for lines in lst:
 
 print("Top 20 Most Popular Words: ")
 
-output = zip([str(i+1)+".'" for i in range(20)],words[0:20])
-for i, word in output: print(i+word,end="' - ")
+for i, word in zip([str(i+1)+".'" for i in range(20)],words[0:20]): 
+	print(i+word,end="' - ")
 print()
 
 # Part b
@@ -41,3 +41,19 @@ except urllib.error.URLError:
 
 S = "\n".join(lst)
 
+# Part d
+word_count = {}
+
+for line in S.split("\n"):
+	for word in line.split(): 
+	# Would avoid empty character and '\r' (for linux)
+		if not word==' ' and not word=="\r":
+			if word.lower() in word_count:
+				word_count[word.lower()]+=1
+			else:
+				word_count[word.lower()]=1
+
+word_count = sorted(word_count.items(), key = lambda kv:(kv[1],kv[0]), reverse=True)
+for i, word in zip([str(i+1)+".'" for i in range(20)],[i for i,r in word_count[0:20]]):
+	print(i+word,end="' - ")
+print()
