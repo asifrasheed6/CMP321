@@ -20,7 +20,8 @@ for i in range(4): lst.pop(i) # Ignoring the first 4 lines
 
 lst_words = [] # List of words
 for lines in lst:
-    words = lines.split(';')
-    lst_words.append(words[1])
+    print(lines)
+    #words = lines.split(';')
+    #lst_words.append(words[1])
 
 print(lst_words)
