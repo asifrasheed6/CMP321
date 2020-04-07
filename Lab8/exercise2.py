@@ -24,4 +24,4 @@ for lines in lst:
 
 print("Top 20 Most Popular Words: ")
 
-for i in range(20): print(i+1,".",words[i],end="-")
+for i in range(20): print(i+1,".'",words[i],end="' - ")
