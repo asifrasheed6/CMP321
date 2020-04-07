@@ -22,4 +22,6 @@ words = [] # List of words
 for lines in lst:
     words.append(lines.split(";")[1])
 
-print(words)
+print("Top 20 Most Popular Words: ")
+
+for i in range(20): print(i+1,".",words[i],end="-")
