@@ -24,16 +24,20 @@ for lines in lst:
 
 print("Top 20 Most Popular Words: ")
 
-output = list(".'".join([str(i+1) for i in range(20)]))
+output = list(".'".join(zip([str(i+1) for i in range(20)],words[0:20]])))
 print(output)
 
 # Part b
 url="http://textfiles.com/100/famous.bug"
 
+lst = []
+
 try:
-    S = urlopen(url).decode('utf8')
+    for line in urlopen(url):
+        lst.append(line.decode('utf8'))
 except urllib.error.URLError:
     print("Error: Check the url")
 
-print(S)
+S = "\n".join(lst)
 
+print(S)
