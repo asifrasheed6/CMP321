@@ -24,7 +24,7 @@ for lines in lst:
 
 print("Top 20 Most Popular Words: ")
 
-output = list(".'".join(zip([str(i+1) for i in range(20)],words[0:20])))
+output = zip([str(i+1) for i in range(20)],words[0:20])
 print(output)
 
 # Part b
