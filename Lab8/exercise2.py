@@ -19,7 +19,7 @@ except urllib.error.URLError:
 for i in range(4): lst.pop(i) # Ignoring the first 4 lines
 
 lst_words = [] # List of words
-for lines in list:
+for lines in lst:
     words = lines.split(';')
     lst_words.append(words[1])
 
