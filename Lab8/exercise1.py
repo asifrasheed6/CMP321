@@ -33,9 +33,10 @@ def Decode(text):
             ret.append(text[i])
     return ''.join(ret)
             
-
+# Testing the functions
 text = "hellow, world!"
 text = Encode(text);
 print("Encoded Text: ",text)
 text = Decode(text);
 print("Decoded Text: ",text)
+# END
