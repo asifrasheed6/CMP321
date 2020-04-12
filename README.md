@@ -1,6 +1,6 @@
 You could download the repository as [zip](https://github.com/asifrasheed6/CMP321/archive/master.zip) or if you are looking for something specific:
 
-1. If your are looking for solutions from Lab 1:
+1. If you are looking for solutions from Lab 1:
   - [Exercise 1](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/Lab1/Exercise1.py)
   - [Exercise 2](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/Lab1/Exercise2.py)
   - [Exercise 3](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/Lab1/Exercise3.py)
