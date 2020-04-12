@@ -1,3 +1,5 @@
+If you are looking forward to test the codes, you could find the [GitHub Workflows](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#about-workflows) output [here](https://github.com/asifrasheed6/CMP321/runs/580386640?check_suite_focus=true#step:11:7)
+
 You could download the repository as [zip](https://github.com/asifrasheed6/CMP321/archive/master.zip) or if you are looking for something specific:
 
 1. If you are looking for solutions from Lab 1:
