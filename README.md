@@ -1,5 +1,3 @@
-You could download the repository as <a href='/archive/master.zip' download>zip</a> or if you are looking for something specific:
-
 1. If you are looking for solutions from Lab 1:
   - <a href='/Lab1/Exercise1.py' download>Exercise 1</a>
   - <a href='/Lab1/Exercise2.py' download>Exercise 2</a>
