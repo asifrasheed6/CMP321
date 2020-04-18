@@ -8,10 +8,9 @@ class Node:
     
 class ParseTree:
     def __init__(self, root = None):
-        self.root = root
-    def __str__(self):
-        pass # to be implemented
-                    
+        self.root = root # root node
+    
+    # Create Parse Tree from PostFix notation
     def fromPostfix(self, expression=""):
         temp = []
         variables = 0
@@ -26,7 +25,7 @@ class ParseTree:
                 node = temp.pop()
                 temp.append(Node(expression[i],node))
                 variables=0
-            elif expression[i] in ['%','/','*','+','-']:
+            elif expression[i] in ['%','/','*','+','-','^']:
                 lnode = temp.pop()
                 rnode = temp.pop()
                 temp.append(Node(expression[i],lnode,rnode))
@@ -35,8 +34,22 @@ class ParseTree:
                 temp.append(Node(expression[i]))
                 variables+=1
         self.root = temp[0]
+        self.reverse()
         return self
+    
+    # Mirror the tree
+    def reverse(self, node='None'):
+        if isinstance(node,type(None)):
+            return
+        if node=='None':
+            node = self.root
         
+        if not (isinstance(node.left,type(None)) and isinstance(node.right,type(None))):
+            node.left,node.right = node.right,node.left
+        self.reverse(node.left)
+        self.reverse(node.right)
+    
+    # Create Parse Tree from InFix notation
     def fromInfix(self, expression=""):
         level = Node('None')
         parent = []
@@ -59,7 +72,7 @@ class ParseTree:
                 level = parent[-1]
                 parent.pop()
                 
-            elif expression[i] in ['%','/','*','+','-', '#']:
+            elif expression[i] in ['%','/','*','+','-', '#', '^']:
                 level.data = expression[i]
             else:
                 if isinstance(level.left, type(None)):
@@ -68,6 +81,7 @@ class ParseTree:
                     level.right = Node(expression[i])
         return self
     
+    # Create Parse Tree from PreFix notation
     def fromPrefix(self, expression=""):
         level = Node('None')
         parent = []
@@ -90,7 +104,7 @@ class ParseTree:
                 level = parent[-1]
                 parent.pop()
                 
-            elif expression[i] in ['%','/','*','+','-', '#']:
+            elif expression[i] in ['%','/','*','+','-', '#', '^']:
                 level.data = expression[i]
             else:
                 if isinstance(level.left, type(None)):
@@ -110,11 +124,55 @@ class ParseTree:
         string+=self.genString(node.right,depth+1)
         return string
     
+    # Recursive function that returns infix notation from Parse tree
+    def infix(self, node='None'):
+        if isinstance(node,type(None)):
+            return ''
+        if node=='None':
+            node = self.root
+        
+        string = ''
+        string+=self.infix(node.left)
+        string+=node.data
+        string+=self.infix(node.right)
+        return string
+    
+    def postfix(self, node='None'):
+        if isinstance(node,type(None)):
+            return ''
+        if node=='None':
+            node = self.root
+        
+        string = ''
+        string+=self.postfix(node.left)
+        string+=self.postfix(node.right)
+        string+=node.data
+        return string
+    
+    def prefix(self, node='None'):
+        if isinstance(node,type(None)):
+            return ''
+        if node=='None':
+            node = self.root
+    
+        string = ''
+        string+=node.data
+        string+=self.prefix(node.left)
+        string+=self.prefix(node.right)
+        return string
+    
     def __str__(self):
         return self.genString(self.root)
     
     def __iter__(self):
-        pass
-        
-print(ParseTree().fromPostfix('b - b b * a c * 4 * - # + 2 a * /'))
+        return iter(self.prefix())
 
+print(ParseTree().fromInfix("(a+b)/2"))
+
+print(list(ParseTree().fromPostfix("x y ^")))
+
+print(ParseTree().fromInfix("(a+b)/2").postfix())
+
+xs = 'x y ^'
+
+print(ParseTree().fromInfix( ParseTree().fromPostfix( xs).infix()).postfix())
