@@ -35,5 +35,7 @@ You could download the repository as [zip](https://github.com/asifrasheed6/CMP32
 8. If you are looking for solutions from Lab 8:
   - [Exercise 1](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/Lab8/exercise1.py)
   - [Exercise 2](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/Lab8/exercise2.py)
+9. If you are looking for solutions from Lab 9:
+  - [Exercise 1](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/Lab9/exercise1.py)
 
 Please note that by downloading contents from this repository, you are agreeing to the terms and conditions specified by the [software license](https://raw.githubusercontent.com/asifrasheed6/CMP321/master/LICENSE)
