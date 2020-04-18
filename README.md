@@ -34,4 +34,4 @@
 9. If you are looking for solutions from Lab 9:
   - <a href='/Lab9/exercise1.py' download>Exercise 1</a>
 
-Please note that by downloading contents from this repository, you are agreeing to the terms and conditions specified by the <a href='/LICENSE' download>software license</a>
+Please note that by downloading contents from this repository, you are agreeing to the terms and conditions specified by the <a href='/LICENSE'>software license</a>
