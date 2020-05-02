@@ -1,0 +1,176 @@
+Markdown: Basics
+================
+
+
+Getting the Gist of Markdown's Formatting Syntax
+------------------------------------------------
+
+This page offers a brief overview of what it's like to use Markdown.
+The syntax page provides complete, detailed documentation for
+every feature, but Markdown should be very easy to pick up simply by
+looking at a few examples of it in action.
+
+It's also helpful to simply try Markdown out; the Dingus is a
+web application that allows you type your own Markdown-formatted text
+and translate it to XHTML.
+
+**Note:** This document is itself written using Markdown.
+
+  
+## Paragraphs and Headers ##
+
+A paragraph is simply one or more consecutive lines of text, separated
+by one or more blank lines. (A blank line is any line that looks like
+a blank line -- a line containing nothing but spaces or tabs is
+considered blank.) Normal paragraphs should not be indented with
+spaces or tabs.
+
+A line that ends with two spaces will force a newline output, hence
+disabling automatic paragraph wrapping. This can be useful e.g., when
+writing programming code, or poetry, or code-poems.
+
+  
+Markdown offers two styles of headers: *Setext* and *atx*.
+Setext-style headers for `<h1>` and `<h2>` are created by
+"underlining" with equal signs (`=`) and hyphens (`-`), respectively.
+To create an atx-style header, you put 1-6 hash marks (`#`) at the
+beginning of the line -- the number of hashes equals the resulting
+HTML header level.
+
+---
+
+Markdown:
+
+A First Level Header
+====================
+    
+A Second Level Header
+---------------------
+
+Now is the time for all good men to come to the aid of their country.
+This is just a regular paragraph.
+
+The quick brown fox jumped over the lazy dog's back.
+
+### Header 3
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+ullamcorper suscipit lobortis nisl ut aliquip ex commodo consequat.
+Duis autem vel eum iriure dolor in enderit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+vero eros et accumsan et iusto odio dignissim qui blandit praesent
+luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+### Another [duh!]
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil
+imperdiet doming id quod mazim placerat facer possim assum. Typi
+non habent claritatem insitam; est usus legentis in iis qui facit
+eorum claritatem. Investigationes demonstraverunt lectores legere
+quod ii legunt saepius. Claritas est etiam processus dynamicus, qui
+sequitur mutationem consuetudium lectorum. Mirum est notare quam
+littera gothica, quam nunc putamus parum claram, anteposuerit
+litterarum formas humanitatis per seacula quarta decima et quinta
+decima. Eodem modo typi, qui nunc nobis videntur parum clari,
+fiant sollemnes in futurum.
+
+---
+
+### Phrase Emphasis ###
+
+Markdown uses *asterisks* and _underscores_ to indicate spans of emphasis (i.e., _italics_).
+   
+Use two asterisks for **strong emphasis** (i.e., **bold**).
+Or, if you prefer, __use two underscores instead__.
+   
+
+## Lists ##
+
+Unordered (bulleted) lists use asterisks, pluses, and hyphens (`*`, `+`,
+and `-`) as list markers. These three markers are interchangable. 
+
+This (using an asterisk `*`):
+
+*   Candy.
+*   Gum.
+*   Booze.
+
+this (using a plus sign `+`):
+
++   Candy.
++   Gum.
++   Booze.
+
+and this (using a minus sign `-`):
+
+-   Candy.
+-   Gum.
+-   Booze.
+
+all produce the same output.
+
+
+Ordered (numbered) lists use regular numbers, followed by periods, as
+list markers:
+
+1.  Red
+2.  Green
+3.  Blue
+
+
+If you put blank lines between items, you'll get `<p>` tags for the
+list item text. You can create multi-paragraph list items by indenting
+the paragraphs by 4 spaces or 1 tab:
+
+*   A list item.
+    
+    With multiple paragraphs.
+
+*   Another item in the list.    
+
+### Code ###
+
+In a regular paragraph, you can create code span by wrapping text in
+backtick quotes. Any ampersands (`&`) and angle brackets (`<` or
+`>`) will automatically be translated into HTML entities. This makes
+it easy to use Markdown to write about HTML example code:
+
+    I strongly recommend against using any `<blink>` tags.
+
+    I wish SmartyPants used named entities like `&mdash;`
+    instead of decimal-encoded entites like `&#8212;`.
+
+
+To specify an entire block of pre-formatted code, indent every line of
+the block by 4 spaces or 1 tab. Just like with code spans, `&`, `<`,
+and `>` characters will be escaped automatically.
+
+---
+
+And to conclude, a word of wisdom, or two...
+
+The Zen of Python, by Tim Peters
+--------------------------------
+
+Beautiful is better than ugly.  
+Explicit is better than implicit.  
+Simple is better than complex.  
+Complex is better than complicated.  
+Flat is better than nested.  
+Sparse is better than dense.  
+Readability counts.  
+Special cases aren't special enough to break the rules.  
+Although practicality beats purity.  
+Errors should never pass silently.  
+Unless explicitly silenced.  
+In the face of ambiguity, refuse the temptation to guess.  
+There should be one-- and preferably only one --obvious way to do it.  
+Although that way may not be obvious at first unless you're Dutch.  
+Now is better than never.  
+Although never is often better than *right* now.  
+If the implementation is hard to explain, it's a bad idea.  
+If the implementation is easy to explain, it may be a good idea.  
+Namespaces are one honking great idea -- let's do more of those!  
+
