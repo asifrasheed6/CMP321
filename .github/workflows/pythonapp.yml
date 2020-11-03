@@ -13,59 +13,57 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: List all files
-      run: ls -l
     - name: Testing Lab 1 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise1.py
+      run: python3 Lab1/Exercise1.py
     - name: Testing Lab 1 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise2.py
+      run: python3 Lab1/Exercise2.py
     - name: Testing Lab 1 Exercise 3
-      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise3.py
+      run: python3 Lab1/Exercise3.py
     - name: Testing Lab 1 Exercise 4
-      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise4.py
+      run: python3 Lab1/Exercise4.py
     - name: Testing Lab 1 Exercise 5
-      run: python3 /home/runner/work/CMP321/CMP321/Lab1/Exercise5.py
+      run: python3 Lab1/Exercise5.py
 
     - name: Testing Lab 2 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab2/exercise1.py
+      run: python3 Lab2/exercise1.py
     - name: Testing Lab 2 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab2/exercise2.py
+      run: python3 Lab2/exercise2.py
     - name: Testing Lab 2 Exercise 3
-      run: python3 /home/runner/work/CMP321/CMP321/Lab2/exercise3.py
+      run: python3 Lab2/exercise3.py
 
     - name: Testing Lab 3 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab3/exercise1.py
+      run: python3 Lab3/exercise1.py
     - name: Testing Lab 3 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab3/exercise2.py
+      run: python3 Lab3/exercise2.py
     - name: Testing Lab 3 Exercise 3
-      run: python3 /home/runner/work/CMP321/CMP321/Lab3/exercise3.py
+      run: python3 Lab3/exercise3.py
     - name: Testing Lab 3 Exercise 4
-      run: python3 /home/runner/work/CMP321/CMP321/Lab3/exercise4.py
+      run: python3 Lab3/exercise4.py
     
     - name: Testing Lab 4 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab4/exercise1.py
+      run: python3 Lab4/exercise1.py
     - name: Testing Lab 4 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab4/exercise2.py
+      run: python3 Lab4/exercise2.py
     - name: Testing Lab 4 Exercise 3
-      run: python3 /home/runner/work/CMP321/CMP321/Lab4/exercise3.py
+      run: python3 Lab4/exercise3.py
     - name: Testing Lab 4 Exercise 4
-      run: python3 /home/runner/work/CMP321/CMP321/Lab4/exercise4.py
+      run: python3 Lab4/exercise4.py
     - name: Testing Lab 4 Exercise 5
-      run: python3 /home/runner/work/CMP321/CMP321/Lab4/exercise5.py
+      run: python3 Lab4/exercise5.py
     
     - name: Testing Lab 6 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab6/exercise1.py
+      run: python3 Lab6/exercise1.py
     - name: Testing Lab 6 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab6/exercise2.py
+      run: python3 Lab6/exercise2.py
       
     - name: Testing Lab 7 Exercise 1
-      run: python3 /home/runner/work/CMP321/CMP321/Lab7/exercise1.py
+      run: python3 Lab7/exercise1.py
     - name: Testing Lab 7 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab7/exercise2.py
+      run: python3 Lab7/exercise2.py
     - name: Testing Lab 7 Exercise 3
-      run: python3 /home/runner/work/CMP321/CMP321/Lab7/exercise3.py
+      run: python3 Lab7/exercise3.py
     
     - name: Testing Lab 8 Exercise 1
       run: range=(1 2 3 4 5); for x in $range; do echo "\n\r"; python3 /home/runner/work/CMP321/CMP321/Lab8/exercise1.py; done
     - name: Testing Lab 8 Exercise 2
-      run: python3 /home/runner/work/CMP321/CMP321/Lab8/exercise2.py
+      run: python3 Lab8/exercise2.py
