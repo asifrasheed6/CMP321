@@ -28,8 +28,6 @@ jobs:
       run: python3 Lab2/exercise1.py
     - name: Testing Lab 2 Exercise 2
       run: python3 Lab2/exercise2.py
-    - name: Testing Lab 2 Exercise 3
-      run: python3 Lab2/exercise3.py
 
     - name: Testing Lab 3 Exercise 1
       run: python3 Lab3/exercise1.py
